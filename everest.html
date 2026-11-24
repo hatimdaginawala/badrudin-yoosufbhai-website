@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#920020">
+
+    <meta name="description"
+        content="Explore Everest fibre cement boards, Artewood, Artestone, ColourClad, Designer Jaalis, Artescape, BioClean and Rapicon at Badrudin Yoosufbhai & Company, Surat.">
+
+    <title>Everest Boards & Fibre Cement Solutions | Badrudin Yoosufbhai & Company</title>
+
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* =====================================
+           EVEREST PAGE - PAGE SPECIFIC STYLES
+        ===================================== */
+
+        .everest-page {
+            --everest-red: #920020;
+            --everest-dark: #222222;
+            --everest-grey: #777777;
+            --everest-light: #f6f5f3;
+            background: #fff;
+        }
+
+        .everest-page,
+        .everest-page * {
+            box-sizing: border-box;
+        }
+
+        /* PAGE HERO */
+
+        .everest-page .page-hero {
+            padding: 85px 0 80px;
+            background: #f5f3f1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .everest-page .page-hero::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(146, 0, 32, 0.08);
+            border-radius: 50%;
+            right: -120px;
+            top: -180px;
+            pointer-events: none;
+        }
+
+        .everest-page .crumb {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .everest-page .crumb a {
+            color: var(--everest-red);
+            text-decoration: none;
+        }
+
+        .everest-page .page-hero h1 {
+            max-width: 850px;
+            font-size: clamp(34px, 5vw, 58px);
+            line-height: 1.12;
+            letter-spacing: -1.8px;
+            font-weight: 700;
+            color: var(--everest-dark);
+            margin: 0 0 20px;
+        }
+
+        .everest-page .page-hero p {
+            max-width: 680px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin: 0;
+        }
+
+        /* PRODUCT SECTION */
+
+        .everest-page .everest-section {
+            padding: 85px 0 100px;
+        }
+
+        .everest-page .eyebrow {
+            color: var(--everest-red);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .everest-page .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 35px;
+            margin-bottom: 45px;
+        }
+
+        .everest-page .section-head h2 {
+            color: #222;
+            font-size: clamp(30px, 4vw, 43px);
+            line-height: 1.18;
+            letter-spacing: -1px;
+            margin: 0;
+            max-width: 500px;
+        }
+
+        .everest-page .section-head h2 em {
+            color: var(--everest-red);
+            font-style: normal;
+        }
+
+        .everest-page .section-head p {
+            max-width: 410px;
+            color: #777;
+            font-size: 14px;
+            line-height: 1.8;
+            margin: 0 0 5px;
+        }
+
+        /* PRODUCT GRID */
+
+        .everest-page .everest-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 25px;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        /* PRODUCT CARD */
+
+        .everest-page .everest-card {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 1px solid #eae8e6;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .everest-page .everest-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+        }
+
+        /* IMAGE CONTAINER */
+
+        .everest-page .everest-photo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 235px;
+            padding: 18px;
+            overflow: hidden;
+            background: #f5f4f2;
+            text-decoration: none;
+        }
+
+        .everest-page .everest-photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.45s ease;
+        }
+
+        .everest-page .everest-card:hover .everest-photo img {
+            transform: scale(1.05);
+        }
+
+        /* CARD INFORMATION */
+
+        .everest-page .everest-card-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 23px 21px 24px;
+        }
+
+        .everest-page .everest-tag {
+            display: inline-block;
+            color: var(--everest-red);
+            font-size: 10px;
+            line-height: 1.5;
+            font-weight: 700;
+            letter-spacing: 1.1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .everest-page .everest-card h3 {
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: 700;
+            color: #222;
+            margin: 0 0 12px;
+        }
+
+        .everest-page .everest-card p {
+            font-size: 13px;
+            line-height: 1.75;
+            color: #777;
+            margin: 0 0 22px;
+            flex: 1;
+        }
+
+        .everest-page .everest-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            width: 100%;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            color: var(--everest-red);
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .everest-page .everest-link:hover {
+            color: #c00032;
+        }
+
+        /* ENQUIRY BANNER */
+
+        .everest-page .everest-cta {
+            background: #920020;
+            padding: 55px 0;
+            color: #fff;
+        }
+
+        .everest-page .everest-cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .everest-page .everest-cta h2 {
+            font-size: clamp(25px, 3vw, 36px);
+            line-height: 1.2;
+            margin: 0 0 12px;
+        }
+
+        .everest-page .everest-cta p {
+            color: #ead5da;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 570px;
+            margin: 0;
+        }
+
+        .everest-page .everest-cta .cta-button {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #fff;
+            color: #920020;
+            border-radius: 3px;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.25s ease;
+        }
+
+        .everest-page .everest-cta .cta-button:hover {
+            background: #f2e8eb;
+        }
+
+        /* TABLET */
+
+        @media (max-width: 1100px) {
+            .everest-page .everest-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 20px;
+            }
+
+            .everest-page .everest-photo {
+                height: 220px;
+            }
+        }
+
+        /* SMALL TABLET */
+
+        @media (max-width: 768px) {
+            .everest-page .page-hero {
+                padding: 60px 0;
+            }
+
+            .everest-page .everest-section {
+                padding: 60px 0 70px;
+            }
+
+            .everest-page .section-head {
+                display: block;
+            }
+
+            .everest-page .section-head p {
+                margin-top: 18px;
+            }
+
+            .everest-page .everest-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 17px;
+            }
+
+            .everest-page .everest-photo {
+                height: 210px;
+                padding: 14px;
+            }
+
+            .everest-page .everest-card-body {
+                padding: 19px 16px 20px;
+            }
+
+            .everest-page .everest-card h3 {
+                font-size: 18px;
+            }
+
+            .everest-page .everest-cta-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 480px) {
+            .everest-page .page-hero {
+                padding: 45px 0;
+            }
+
+            .everest-page .page-hero h1 {
+                font-size: 34px;
+                letter-spacing: -1px;
+            }
+
+            .everest-page .everest-section {
+                padding: 48px 0 55px;
+            }
+
+            .everest-page .everest-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .everest-page .everest-photo {
+                height: 250px;
+                padding: 18px;
+            }
+
+            .everest-page .everest-card-body {
+                padding: 22px;
+            }
+
+            .everest-page .everest-card h3 {
+                font-size: 20px;
+            }
+
+            .everest-page .everest-cta {
+                padding: 42px 0;
+            }
+        }
+
+        /* REDUCED MOTION */
+
+        @media (prefers-reduced-motion: reduce) {
+            .everest-page *,
+            .everest-page *::before,
+            .everest-page *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="wrap">
+            <span>7/4538 Station Road, Opp. Torrent Power, Nr. Delhi Gate, Surat – 395003</span>
+            <span>GSTIN: <b>24AABFT6310R1ZY</b> &nbsp; | &nbsp; Since 1932</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="wrap header-main">
+
+            <a class="brand" href="index.html">
+                <img src="assets/logo.png" alt="Badrudin Yoosufbhai & Company">
+                <span class="brandtext">
+                    <b>BADRUDIN YOOSUFBHAI</b>
+                    <strong>& COMPANY</strong>
+                    <small>BUILDING MATERIALS SUPPLIERS & TRADERS</small>
+                </span>
+            </a>
+
+            <button class="menu" aria-label="Toggle navigation">☰</button>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="everest.html">Everest Range</a>
+                <a href="brochures.html">Brochures</a>
+                <a href="contact.html" class="quote">Get a Quote ↗</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="everest-page">
+
+        <!-- PAGE HERO -->
+
+        <section class="page-hero">
+            <div class="wrap">
+
+                <div class="crumb">
+                    <a href="index.html">Home</a> / Everest Range
+                </div>
+
+                <h1>Everest Boards & Fibre Cement Solutions.</h1>
+
+                <p>
+                    As an Everest distributor, we offer a range of building products
+                    for cladding, ceilings, walls, flooring and other construction
+                    applications. Explore the product range below.
+                </p>
+
+            </div>
+        </section>
+
+
+        <!-- PRODUCT CATALOGUE -->
+
+        <section class="everest-section">
+            <div class="wrap">
+
+                <div class="eyebrow">Authorised Product Range</div>
+
+                <div class="section-head">
+
+                    <h2>
+                        Designed for<br>
+                        <em>building possibilities.</em>
+                    </h2>
+
+                    <p>
+                        Explore selected products from the Everest range.
+                        Each product includes a dedicated manufacturer brochure
+                        with further information and product details.
+                    </p>
+
+                </div>
+
+
+                <div class="everest-grid">
+
+                    <!-- SUPERHD -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-superhd-boards.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/superhd.jpg"
+                                alt="Everest SuperHD fibre cement boards">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Fibre Cement Boards</span>
+
+                            <h3>SuperHD Boards</h3>
+
+                            <p>
+                                Heavy-duty fibre cement boards for a range
+                                of building and construction applications.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-superhd-boards.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- ARTEWOOD -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-artewood.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/artewood.jpg"
+                                alt="Everest Artewood wood-look cladding">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Wood-Look Cladding</span>
+
+                            <h3>Artewood</h3>
+
+                            <p>
+                                Wood-inspired cement cladding for distinctive
+                                architectural surfaces and exterior applications.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-artewood.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- ARTESTONE -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-artestone.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/artestone.jpg"
+                                alt="Everest Artestone stone-look cladding">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Stone-Look Cladding</span>
+
+                            <h3>Artestone</h3>
+
+                            <p>
+                                Stone-inspired cement cladding surfaces
+                                for contemporary architectural designs.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-artestone.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- COLOURCLAD -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-colourclad.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/colourclad.jpg"
+                                alt="Everest ColourClad facade boards">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Coloured Façade Boards</span>
+
+                            <h3>ColourClad</h3>
+
+                            <p>
+                                Through-coloured compressed boards for
+                                attractive and functional building façades.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-colourclad.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- DESIGNER JAALIS -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-designer-jaalis.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/jaalis.jpg"
+                                alt="Everest Designer Jaalis decorative screens">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Decorative Screens</span>
+
+                            <h3>Designer Jaalis</h3>
+
+                            <p>
+                                Decorative perforated panels for architectural
+                                screening and creative design applications.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-designer-jaalis.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- ARTESCAPE -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-artescape-ceilings.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/artescape.jpg"
+                                alt="Everest Artescape decorative ceiling systems">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Decorative Ceiling Systems</span>
+
+                            <h3>Artescape Ceilings</h3>
+
+                            <p>
+                                Designer ceiling solutions for creating
+                                distinctive and visually appealing interiors.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-artescape-ceilings.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- BIOCLEAN -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-bioclean.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/bioclean.jpg"
+                                alt="Everest BioClean anti-microbial ceiling solution">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Anti-Microbial Ceilings</span>
+
+                            <h3>BioClean</h3>
+
+                            <p>
+                                Anti-microbial ceiling solutions designed
+                                for hygiene-conscious interior environments.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-bioclean.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- RAPICON -->
+
+                    <article class="everest-card">
+
+                        <a class="everest-photo"
+                            href="brochures/everest-rapicon.pdf"
+                            target="_blank" rel="noopener">
+
+                            <img src="assets/rapicon.jpg"
+                                alt="Everest Rapicon prefabricated wall panels">
+
+                        </a>
+
+                        <div class="everest-card-body">
+
+                            <span class="everest-tag">Prefabricated Wall Systems</span>
+
+                            <h3>Rapicon</h3>
+
+                            <p>
+                                Ready-made sandwich wall panels for modern
+                                building and partitioning applications.
+                            </p>
+
+                            <a class="everest-link"
+                                href="brochures/everest-rapicon.pdf"
+                                target="_blank" rel="noopener">
+
+                                View Product Brochure <span>↗</span>
+
+                            </a>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ENQUIRY BANNER -->
+
+        <section class="everest-cta">
+
+            <div class="wrap">
+
+                <div class="everest-cta-inner">
+
+                    <div>
+
+                        <h2>Looking for Everest products?</h2>
+
+                        <p>
+                            Contact us for product information, availability,
+                            pricing and quotations. Our team can help you
+                            find the right materials for your project.
+                        </p>
+
+                    </div>
+
+                    <a class="cta-button" href="contact.html">
+                        Enquire Now ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="wrap">
+
+            <div class="footer-top">
+
+                <div>
+
+                    <a class="brand" href="index.html">
+
+                        <img src="assets/logo.png" alt="">
+
+                        <span class="brandtext">
+
+                            <b style="color:#fff">BADRUDIN YOOSUFBHAI</b>
+
+                            <strong>& COMPANY</strong>
+
+                            <small style="color:#aaa">
+                                BUILDING MATERIALS SUPPLIERS & TRADERS
+                            </small>
+
+                        </span>
+
+                    </a>
+
+                    <p>
+                        Building materials supplier and trader in Surat,
+                        Gujarat. Trusted since 1932.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>EXPLORE</h4>
+
+                    <div class="footer-links">
+
+                        <a href="about.html">About Us</a>
+
+                        <a href="products.html">All Products</a>
+
+                        <a href="everest.html">Everest Boards</a>
+
+                        <a href="brochures.html">Brochures & Downloads</a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h4>CONTACT</h4>
+
+                    <p>
+                        7/4538 Station Road, Opp. Torrent Power,
+                        Near Delhi Gate, Surat – 395003, Gujarat
+                    </p>
+
+                    <a href="tel:+919879524860">+91 98795 24860</a>
+
+                    <br>
+
+                    <a href="tel:+919879511046">+91 98795 11046</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © <span data-year></span> Badrudin Yoosufbhai & Company
+                </span>
+
+                <span>
+                    Surat, Gujarat, India · GSTIN 24AABFT6310R1ZY
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- WHATSAPP -->
+
+    <a class="float-wa"
+        href="https://wa.me/919879524860?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Everest%20products."
+        target="_blank"
+        rel="noopener"
+        aria-label="Contact us on WhatsApp">
+
+        ◔
+
+    </a>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
